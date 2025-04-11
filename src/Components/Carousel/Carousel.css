@@ -1,0 +1,29 @@
+.carousel-item img {
+  width: 100%;
+  height: 600px; 
+  object-fit: cover;
+}
+
+/* Add blur effect to non-active images */
+.carousel-item {
+  transition: opacity 0.8s ease-in-out, filter 0.8s ease-in-out !important; /* Slower transition */
+  opacity: 0.5;
+  filter: blur(5px);
+}
+
+/* Make the active slide fully visible and remove blur */
+.carousel-item.active {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Improve text visibility */
+.carousel-caption h3 {
+  transition: opacity 0.8s ease-in-out; /* Slower transition */
+  opacity: 0;
+}
+
+/* Ensure text is fully visible on active slide */
+.carousel-item.active .carousel-caption h3 {
+  opacity: 1;
+}
